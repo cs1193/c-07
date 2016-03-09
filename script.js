@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	angular.module("app", ["ui.router", "app.home", "app.work", "app.publication", "app.profile"]);
+	angular.module("app", ["ui.router", "app.home", "app.work", "app.publication", "app.profile", "app.contact"]);
 
 	function Run ($log) {
 		$log.log("Run");
@@ -113,13 +113,48 @@
 	angular.module('app.work').config(WorkConfig);
 
 
-	function WorkController ($log) {
-		$log.log("Work")
+	function WorkController ($log, $stateParams, WorkService) {
+		$log.log("Work", $stateParams.item);
+
+
+
+		if($stateParams.item) {
+			this.showList = false;
+			WorkService.getDataByKey($stateParams.item).then(function (response) {
+				$log.log(response);
+			}, function (error) {
+				$log.error(error);
+			});
+		} else {
+			this.showList = true;
+		}
+
 	}
 
-	WorkController.$inject = ['$log'];
+	WorkController.$inject = ['$log', '$stateParams', 'WorkService'];
 
 	angular.module('app.work').controller("WorkController", WorkController);
+
+	function WorkService ($http, $log, $q) {
+
+		this.getDataByKey = function (key) {
+			$log.log(key);
+			var deferred = $q.defer();
+			$http.get("/work/" + key + "/data.json").then(function(response) {
+				deferred.resolve(response.data);
+			}, function (error) {
+				deferred.resolve(error);
+			});
+
+			return deferred.promise;
+		};
+
+	}
+
+	WorkService.$inject = ['$http', '$log', '$q'];
+
+	angular.module('app.work').service('WorkService', WorkService);
+
 
 	/////////////////////////////////////
 
@@ -184,6 +219,35 @@
 	angular.module('app.profile').controller("ProfileController", ProfileController);
 
 	/////////////////////////////////////
+	
+	/////////////////////////////////////
+	
+	/// Contact Module ///
+	
+	angular.module('app.contact', []);
+
+	function ContactDirective () {
+
+		var directive = {
+			link: link,
+			templateUrl: "contact.html",
+			restrict: 'EA'
+		};
+
+		return directive;
+
+		function link (scope, element, attrs) {
+			/* */
+		}
+	}
+
+	ContactDirective.$inject = [];
+
+	angular.module('app.contact').directive("contact", ContactDirective);
+
+
+	/////////////////////////////////////
+
 
 
 })(angular);

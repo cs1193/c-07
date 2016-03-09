@@ -1,0 +1,20 @@
+{
+	"data-category": 1,
+	"name": "Vision 2012",
+	"description": "",
+	"url": {
+		"state": "inactive",
+		"uri": "http://www.vision2012.org.in"
+	},
+	"images": [{
+		"title": "",
+		"url": ""
+	}, {
+		"title": "",
+		"url": ""
+	}, {
+		"title": "",
+		"url": ""
+	}],
+	"tags": ["", ""]
+}

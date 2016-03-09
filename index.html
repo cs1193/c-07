@@ -8,15 +8,21 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 		<link rel="stylesheet" href="style.css">
 
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body ng-app="app">
 		<div class="container">
-			<portfolio-header></portfolio-header>
-			<ui-view></ui-view>
-			<portfolio-footer></portfolio-footer>
+			<header>
+				<portfolio-header></portfolio-header>
+			</header>
+			<main>
+				<ui-view></ui-view>
+			</main>
+			<footer>
+				<portfolio-footer></portfolio-footer>
+			</footer>
 		</div>
 
 		<script type="text/ng-template" id="home.html">
@@ -32,6 +38,7 @@
 				</div>
 				<div class="one-half column">
 					<!-- Map & Contact & Github -->
+					<contact></contact>
 				</div>
 			</div>
 		</script>
@@ -40,32 +47,96 @@
 				<div class="twelve column">
 					<h4 class="section-title">Work</h4>
 				</div>
-				<div class="twelve column data-content-holder">
+				<div class="twelve column data-content-holder" ng-show="vm.showList">
 					<div class="row data-content">
-						<div class="three columns">
+						<div class="two columns">
 							<h6 class="data-date-title">2012</h6>
 						</div>
-						<div class="nine columns">
+						<div class="ten columns">
 							<ul class="data-content-link">
-								<li><a href="">VISION 2012</a></li>
-								<li><a href="">AACEG 2012</a></li>
+								<li><a href="/work/vision2012">VISION 2012</a></li>
+								<li><a href="/work/aaceg2012">AACEG 2012</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="row data-content">
-						<div class="three columns">
+						<div class="two columns">
 							<h6 class="data-date-title">2013</h6>
 						</div>
-						<div class="nine columns">
-							
+						<div class="ten columns">
+							<ul class="data-content-link">
+								<li><a href="/work/itrix2013">ITRIX 2013</a></li>
+								<li><a href="/work/cos2013">COS 2013</a></li>
+								<li><a href="/work/ceghostel">CEG Hostel</a></li>
+								<li><a href="/work/k2014">Kurukshetra 2014</a></li>
+							</ul>
 						</div>
 					</div>
 					<div class="row data-content">
-						<div class="three columns">
+						<div class="two columns">
 							<h6 class="data-date-title">2014</h6>
 						</div>
+						<div class="ten columns">
+							<ul class="data-content-link">
+								<li><a href="/work/pinnacle2014">PINNACLE 2014</a></li>
+								<li><a href="/work/itrix2014">ITRIX 2014</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row data-content">
+						<div class="two columns">
+							<h6 class="data-date-title">2015</h6>
+						</div>
+						<div class="ten columns">
+							<div class="ten columns">
+								<ul class="data-content-link">
+									<li><a href="/work/kiewit">Kiewit</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row data-content">
+						<div class="two columns">
+							<h6 class="data-date-title">2016</h6>
+						</div>
+						<div class="ten columns">
+							<ul class="data-content-link">
+								<li><a href="/work/visionlink">VisionLink</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="twelve column data-content-holder" ng-hide="vm.showList">
+					<div class="row work-item-holder" data-type="1">
+						<div class="three columns">
+							<h3 class="work-item-title">
+								Hello
+							</h3>
+							<h5 class="work-item-status">
+								Active
+							</h5>
+							<p class="work-item-description">
+								Lorem ipsum dolor sit amet, ei eos populo delectus. Ea vel honestatis scribentur. Ius quis offendit ei, qui eros prima argumentum et. Eu modus alienum definitionem vim, vix te modo sale propriae
+							</p>
+							<div class="work-item-tags">
+								<span>Tag 1</span>
+								<span>Tag 2</span>
+								<span>Tag 3</span>
+							</div>
+						</div>
 						<div class="nine columns">
-							
+							<div class='browser-window'>
+								<div class='top-bar'>
+									<div class='circles'>
+										<div class="circle circle-red"></div>
+										<div class="circle circle-yellow"></div>
+										<div class="circle circle-green"></div>
+									</div>
+								</div>
+								<div class='content'>
+
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -78,11 +149,40 @@
 				</div>
 				<div class="twelve column data-content-holder">
 					<div class="row data-content">
-						<div class="three columns">
+						<div class="two columns">
 							<h6 class="data-date-title">2014</h6>
 						</div>
-						<div class="nine columns">
-							
+						<div class="ten columns">
+							<div class="data-content-publication-list">
+								<div class="row">
+									<div class="publication-header">
+										<h4 class="publication-title">
+											Feature Selection Framework for Data Analytics in Microblogs
+										</h4>
+										<h5 class="publication-sub-title">
+											ERCICA 2014 - Emerging Research In Computing, Information, Communication And Applications
+										</h5>
+										<h5 class="publication-volume">
+											Volume 2
+										</h5>
+									</div>
+									<div class="publication-content"> 
+										<p>
+											The usage of social networks has been on the rise owing to the ubiquitous availability of the Internet. People use social networks to express their views, to provide their comments and to share their experiences with everyone. This data can be used by various people, from manufacturers of products, to politicians predicting election results thus making it an actively pursued research problem in social networks research. Specifically, the problem of obtaining the opinion of people about a certain entity is of high importance. A myriad of traditional learning based text classification schemes have been proposed over the years to this end. However, in microblogs such as Twitter, a lexicon based classification scheme is more suitable owing to the short length of the text. Our aim in this project is to build a novel opinion search engine that makes use of a sentimental word dictionary for text classification to deduce the intents.
+										</p>
+									</div>
+									<div class="publication-footer"> 
+										<h5 class="publication-publisher-title">
+											Elsevier Science and Technology
+											<div class="u-pull-right publication-options-menu">
+												<a href="javascript:void(0)" disabled><i class="fa fa-external-link"></i></a>
+												<a href="http://www.elsevierst.com/conference_book_download_chapter.php?cbid=83#chapter60" target="_blank"><i class="fa fa-link"></i></a>
+												<a href="/publication/9789351072621_ERCICA_2014_vol2_60.pdf" target="_blank"><i class="fa fa-download"></i></a>
+											</div>
+										</h5>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -92,6 +192,27 @@
 			<div class="row"> 
 				<div class="twelve column">
 					<h4 class="section-title">Profile</h4>
+				</div>
+			</div>
+		</script>
+		<script type="text/ng-template" id="contact.html">
+			<div class="row">
+				<div class="twelve column">
+					<div class="contact-social-icons">
+						<a href="https://www.facebook.com/cs1193" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="https://github.com/cs1193" target="_blank"><i class="fa fa-github"></i></a>
+						<a href="https://bitbucket.org/cs1193/" target="_blank"><i class="fa fa-bitbucket"></i></a>
+						<a href="https://www.instagram.com/cs1193/" target="_blank"><i class="fa fa-instagram"></i></a>
+						<a href="https://www.linkedin.com/in/cs1193" target="_blank"><i class="fa fa-linkedin"></i></a>
+					</div>
+					<div class="contact-address">
+						34/7, CPWD Quarters (New), 2nd Avenue, Besant Nagar, <br>
+						Chennai - 600090
+					</div>
+					<div class="contact-phone-email">
+						<span>chandresh.rm@gmail.com</span>
+						<span class="u-pull-right">+91 9791793004</span>
+					</div>
 				</div>
 			</div>
 		</script>
@@ -107,7 +228,7 @@
 		<script type="text/ng-template" id="portfolio-footer.html"> 
 			<div class="row">
 				<div class="twelve column">
-					<h6 class="footer-stamp">Designed with [] by Chandresh</h6>
+					<h6 class="footer-stamp">designed & made in <span>chennai</span></h6>
 				</div>
 			</div>
 		</script>
