@@ -273,7 +273,7 @@ h5.work-item-status {
 	font-size: 1vw;
 	text-transform: uppercase;
 	background: rgba(2, 2, 2, 1.0);
-	color: rgba(255, 255, 255, 1.0);
+	color: hsla(60, 8%, 95%, 1.0);
 	letter-spacing: 0.1vw;
 	text-align: center;
 }
@@ -399,10 +399,23 @@ div.work-item-tags span {
 h5.current-profile {
 	font-family: 'Varela Round', sans-serif;
 	font-size: 2vw;
+	text-transform: uppercase;
+	margin-bottom: 0;
 }
 
 h5.current-profile span {
 	font-weight: bold;
+}
+
+h6.current-profile-sub {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.5vw;
+	margin-bottom: 0;
+}
+
+div.current-profile-divider {
+	margin: 2% 0;
+	border-bottom: 1px dotted rgba(2, 2, 2, 1.0);
 }
 
 h6.skill-bar-title {
@@ -465,4 +478,106 @@ div.radar-chart {
     float: left;
     width: 300px;
     margin-left: 10%;
+}
+
+h6.current-profile-track-title {
+	font-family: 'DINPro';
+	font-size: 1.5vw;
+	text-transform: uppercase;
+}
+
+div.current-profile-track-data-holder {
+	font-family: 'Varela Round', sans-serif;	
+	margin-bottom: 2.5%;
+}
+
+div.current-profile-data-title {
+	font-size: 1.25vw;	
+    color: rgba(2, 2, 2, 1.0);
+    text-transform: uppercase;
+	font-weight: bold;
+}
+
+div.current-profile-data-sub-title {
+	float: left;
+	width: 100%;
+	padding: 1% 0;
+}
+
+div.current-profile-data-year {
+	font-size: 0.75vw;
+	width: auto;
+	color: rgba(2, 2, 2, 1.0);
+	text-transform: uppercase;
+	border-radius: 5px;
+	border: 1px solid rgba(2, 2, 2, 1.0);
+	text-align: center;
+	float: left;
+	padding: 0.1% 2%;
+	margin: 0 1%;
+}
+
+div.current-profile-data-type {
+	font-size: 0.75vw;
+	width: auto;
+	color: hsla(60, 8%, 95%, 1.0);
+	text-transform: uppercase;
+	border-radius: 5px;
+	background: rgba(2, 2, 2, 1.0);
+	border: 1px solid rgba(2, 2, 2, 1.0);
+	text-align: center;
+	float: left;
+	padding: 0.1% 2%;
+	margin: 0 1%;
+}
+
+div.current-profile-data-content {
+	padding: 5% 2%;
+	font-size: 1vw;
+	text-align: justify;
+}
+
+div.current-profile-data-sub-header {
+	font-size: 1.10vw;
+	font-style: italic;
+}
+
+div.current-profile-data-course-holder {
+	padding: 0 2%;
+	font-size: 1vw;
+	border-left: 2px solid rgba(2, 2, 2, 1.0);
+	margin: 1%;
+}
+
+div.current-profile-data-degree {
+	font-weight: bold;
+}
+
+div.current-profile-data-course {
+	font-style: italic;
+} 
+
+img.current-profile-hobby-image {
+	width: 15%;
+}
+
+a.current-profile-download-icon {
+	color: rgba(2, 2, 2, 1.0);
+	font-size: 2vw;
+	text-decoration: none;
+	text-align: center;
+	font-family: 'DINPro';
+	text-transform: uppercase;
+	margin: 10% 25%;
+}
+
+ul.current-profile-data-list {
+	list-style: none;
+	padding: 2% 0;
+}
+
+ul.current-profile-data-list li {
+	border-left: 0.5px solid rgba(2, 2, 2, 0.5);
+    padding-left: 2.5%;
+    margin-bottom: 1.5%;
 }

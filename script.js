@@ -249,12 +249,13 @@
 
 		var data = [
 			[
-				{axis:"Programming",value:0.75},
+				{axis:"Programming",value:0.65},
 				{axis:"Database",value:0.50},
 				{axis:"Operating System",value:0.60},
 				{axis:"Framework",value:0.65},
 				{axis:"Software & Tools",value:0.40},
-				{axis:"IDE",value:0.45}	
+				{axis:"IDE",value:0.45},
+				{axis:"Cloud Service",value:0.25}	
 			]
 		];
 
