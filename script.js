@@ -103,11 +103,12 @@
 	angular.module('app.home').config(HomeConfig);
 
 
-	function HomeController ($log) {
-		$log.log("Home")
+	function HomeController ($log, $rootScope) {
+		$log.log("Home");
+		$rootScope.showFooterMenu = false;
 	}
 
-	HomeController.$inject = ['$log'];
+	HomeController.$inject = ['$log', '$rootScope'];
 
 	angular.module('app.home').controller("HomeController", HomeController);
 
@@ -138,9 +139,10 @@
 	angular.module('app.work').config(WorkConfig);
 
 
-	function WorkController ($log, $stateParams, WorkService) {
+	function WorkController ($log, $stateParams, WorkService, $rootScope) {
 		$log.log("Work", $stateParams.item);
 
+		$rootScope.showFooterMenu = true;
 
 		var self = this;
 		if($stateParams.item) {
@@ -157,7 +159,7 @@
 
 	}
 
-	WorkController.$inject = ['$log', '$stateParams', 'WorkService'];
+	WorkController.$inject = ['$log', '$stateParams', 'WorkService', '$rootScope'];
 
 	angular.module('app.work').controller("WorkController", WorkController);
 
@@ -209,11 +211,12 @@
 	angular.module('app.publication').config(PublicationConfig);
 
 
-	function PublicationController ($log) {
-		$log.log("Publication")
+	function PublicationController ($log, $rootScope) {
+		$log.log("Publication");
+		$rootScope.showFooterMenu = true;
 	}
 
-	PublicationController.$inject = ['$log'];
+	PublicationController.$inject = ['$log', '$rootScope'];
 
 	angular.module('app.publication').controller("PublicationController", PublicationController);
 
@@ -238,9 +241,9 @@
 	angular.module('app.profile').config(ProfileConfig);
 
 
-	function ProfileController ($log) {
+	function ProfileController ($log, $rootScope) {
 		$log.log("Profile");
-
+		$rootScope.showFooterMenu = true;
 
 		var margin = {top: 50, right: 50, bottom: 50, left: 50},
 			width = Math.min(300, window.innerWidth - 10) - margin.left - margin.right,
@@ -298,7 +301,7 @@
 		RadarChart(".frontDevelopmentSkillChart", front,  frontRadarChartOptions);
 	}
 
-	ProfileController.$inject = ['$log'];
+	ProfileController.$inject = ['$log', '$rootScope'];
 
 	angular.module('app.profile').controller("ProfileController", ProfileController);
 
