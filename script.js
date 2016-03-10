@@ -59,6 +59,29 @@
 
 	angular.module("app").directive("portfolioFooter", PorfolioFooter);
 
+	function UpdateTitle ($rootScope, $timeout) {
+		var directive = {
+			link: link
+		};
+
+		return directive;
+
+		function link (scope, element, attrs) {
+			var listener = function (event, toState, toParams, fromState, fromParams) {
+				$timeout(function () {
+					$rootScope.title = (toState.title) ? toState.title + " | Chandresh Rajkumar Manonmani" : "Chandresh Rajkumar Manonmani";
+				});
+			};
+
+			$rootScope.$on('$stateChangeSuccess', listener);
+		}
+	}
+
+	UpdateTitle.$inject = ['$rootScope', '$timeout'];
+
+	angular.module('app').directive('title', UpdateTitle);
+
+
 	/////////////////////////////////////
 	
 	/// Home Module ///
@@ -70,7 +93,8 @@
 			url: "/",
 			templateUrl: "home.html",
 			controller: "HomeController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			title: "Home"
 		});
 	}
 
@@ -102,6 +126,7 @@
 			templateUrl: "work.html",
 			controller: "WorkController",
 			controllerAs: "vm",
+			title: "Work",
 			params: {
 				item: { squash: true, value: null }
 			}
@@ -117,10 +142,11 @@
 		$log.log("Work", $stateParams.item);
 
 
-
+		var self = this;
 		if($stateParams.item) {
 			this.showList = false;
 			WorkService.getDataByKey($stateParams.item).then(function (response) {
+				self.workData = response;
 				$log.log(response);
 			}, function (error) {
 				$log.error(error);
@@ -171,6 +197,7 @@
 			templateUrl: "publication.html",
 			controller: "PublicationController",
 			controllerAs: "vm",
+			title: "Publication",
 			params: {
 				item: { squash: true, value: null }
 			}
@@ -201,7 +228,8 @@
 			url: "/profile",
 			templateUrl: "profile.html",
 			controller: "ProfileController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			title: "Profile"
 		});
 	}
 
@@ -211,7 +239,62 @@
 
 
 	function ProfileController ($log) {
-		$log.log("Profile")
+		$log.log("Profile");
+
+
+		var margin = {top: 50, right: 50, bottom: 50, left: 50},
+			width = Math.min(300, window.innerWidth - 10) - margin.left - margin.right,
+			height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+	
+
+		var data = [
+			[
+				{axis:"Programming",value:0.75},
+				{axis:"Database",value:0.50},
+				{axis:"Operating System",value:0.60},
+				{axis:"Framework",value:0.65},
+				{axis:"Software & Tools",value:0.40},
+				{axis:"IDE",value:0.45}	
+			]
+		];
+
+		var front = [
+			[
+				{axis:"Coding",value:0.60},
+				{axis:"Design",value:0.25},
+				{axis:"Tools",value:0.55},
+				{axis:"Framework",value:0.65}
+			]
+		];
+		
+		var color = d3.scale.ordinal()
+			.range(["#696969"]);
+			
+		var radarChartOptions = {
+		  w: width,
+		  h: height,
+		  margin: margin,
+		  maxValue: 1.0,
+		  levels: 5,
+		  roundStrokes: true,
+		  color: color
+		};
+
+		var frontcolor = d3.scale.ordinal()
+			.range(["#696969"]);
+
+		var frontRadarChartOptions = {
+		  w: width,
+		  h: height,
+		  margin: margin,
+		  maxValue: 1.0,
+		  levels: 5,
+		  roundStrokes: true,
+		  color: frontcolor
+		};
+		//Call function to draw the Radar chart
+		RadarChart(".generalSkillChart", data, radarChartOptions);
+		RadarChart(".frontDevelopmentSkillChart", front,  frontRadarChartOptions);
 	}
 
 	ProfileController.$inject = ['$log'];

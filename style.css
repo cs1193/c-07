@@ -253,6 +253,18 @@ h3.work-item-title {
 	text-transform: uppercase;	
 }
 
+h5.work-item-url {
+	font-size: 1vw;
+}
+
+h5.work-item-url a {
+	color: rgba(2, 2, 2, 1.0);
+	text-decoration: none;
+}
+
+h5.work-item-url a:hover {
+	border-bottom: 1px dotted rgba(2, 2, 2, 1.0);
+}
 
 h5.work-item-status {
 	border: 1px solid rgba(2, 2, 2, 1.0);
@@ -275,7 +287,7 @@ p.work-item-description {
 
 div.work-item-tags {
 	font-size: 1vw;
-	padding: 5%;
+	padding: 5% 1%;
 }
 
 div.work-item-tags span {
@@ -285,6 +297,7 @@ div.work-item-tags span {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 0.75vw;
+	margin: 1%;
 }
 
 .browser-window
@@ -371,4 +384,85 @@ div.work-item-tags span {
 .contact-phone-email span {
 	padding: 0 2%;
 	font-size: 1vw;
+}
+
+.legend {
+	font-family: 'Varela Round', sans-serif;
+	fill: #333333;
+}
+
+.tooltip {
+	font-family: 'Varela Round', sans-serif;
+	fill: #333333;
+}
+
+h5.current-profile {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 2vw;
+}
+
+h5.current-profile span {
+	font-weight: bold;
+}
+
+h6.skill-bar-title {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.10vw;
+	margin-bottom: 0;
+	padding: 1% 0;
+	border-bottom: 1px dotted rgba(2, 2, 2, 1.0);
+	margin: 2% 0;
+}
+
+div.skill-bar-holder {
+	font-family: 'Varela Round', sans-serif;
+}
+
+div.skill-bar-division {
+	padding: 2% 0;
+}
+
+h6.skill-bar-sub-title {
+	font-size: 1vw;
+	margin-bottom: 0;
+}
+
+div.skill-bar-division span {
+	left: 2%;
+	position: relative;
+	font-size: 0.75vw;
+	/* font-weight: bolder; */
+	font-family: 'Varela Round', sans-serif;
+	color: #fff;
+	top: -25px;
+}
+
+progress {
+	background-color: #f3f3f3;
+	border: 0;
+	height: 1em;
+	width: 100%;
+}
+
+progress::-webkit-progress-bar {
+	background-color: #e0eaf0;
+}
+
+progress::-webkit-progress-value {
+	background-color: #696969;
+}
+
+progress::-moz-progress-bar {
+	background-color: #329ad1;
+}
+
+div.skill-bar {
+	padding: 2% 0;
+}
+
+div.radar-chart {
+	display: block;
+    float: left;
+    width: 300px;
+    margin-left: 10%;
 }

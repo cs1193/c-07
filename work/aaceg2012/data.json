@@ -1,8 +1,7 @@
 {
 	"type": 1,
-	"name": "Vision 2012",
+	"name": "AACEG 2012",
 	"description": "",
-	"organisation": "",
 	"url": {
 		"state": "inactive",
 		"uri": "http://www.vision2012.org.in"
@@ -17,9 +16,5 @@
 		"title": "",
 		"url": ""
 	}],
-	"tags": ["php", "mysql", "html", "css", "jquery"],
-	"code": [{
-		"title": "",
-		"url": ""
-	}]
+	"tags": ["php", "mysql", "html", "css", "jquery"]
 }
