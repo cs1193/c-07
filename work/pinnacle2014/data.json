@@ -1,0 +1,19 @@
+{
+	"type": 2,
+	"name": "Pinnacle 2014",
+	"description": "",
+	"organisation": "",
+	"url": {
+		"state": "inactive",
+		"uri": "http://www.pinnacleceg.com/"
+	},
+	"tags": ["php", "mysql", "html", "css", "jquery"],
+	"datadescription": "",
+	"code": [{
+		"title": "Code Repo",
+		"url": "https://bitbucket.org/cs1193/gobbler/"
+	}, {
+		"title": "Full Repo",
+		"url": "https://bitbucket.org/cs1193/gobbler/"
+	}]
+}

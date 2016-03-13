@@ -1,21 +1,21 @@
 {
 	"type": 1,
-	"name": "Vision 2012",
+	"name": "Chamber of Secrets 2013",
 	"description": "",
 	"organisation": "",
 	"url": {
 		"state": "inactive",
-		"uri": "http://www.vision2012.org.in"
+		"uri": "http://cos.itrix.in/"
 	},
 	"images": [{
 		"title": "Home",
-		"url": "/work/vision2012/home.png"
+		"url": "/work/cos2013/home.png"
 	}, {
 		"title": "Page 1",
-		"url": "/work/vision2012/page1.png"
+		"url": "/work/cos2013/page1.png"
 	}, {
 		"title": "Page 2",
-		"url": "/work/vision2012/page2.png"
+		"url": "/work/cos2013/page2.png"
 	}],
 	"tags": ["php", "mysql", "html", "css", "jquery"],
 	"code": [{

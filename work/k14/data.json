@@ -1,0 +1,31 @@
+{
+	"type": 1,
+	"name": "Kurukshetra 2014",
+	"description": "Kurukshetra, an International Techno-Management Festival organized by CEG Tech Forum.",
+	"organisation": "",
+	"url": {
+		"state": "active",
+		"uri": "http://archive14.kurukshetra.org.in/"
+	},
+	"images": [{
+		"title": "Home",
+		"url": "/work/k14/home.png"
+	}, {
+		"title": "Page 1",
+		"url": "/work/k14/page1.png"
+	}, {
+		"title": "Page 2",
+		"url": "/work/k14/page2.png"
+	}, {
+		"title": "Page 3",
+		"url": "/work/k14/page3.png"
+	}, {
+		"title": "Page 4",
+		"url": "/work/k14/page4.png"
+	}],
+	"tags": ["php", "codeigniter", "mysql", "html", "css", "jquery"],
+	"code": [{
+		"title": "",
+		"url": ""
+	}]
+}

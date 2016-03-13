@@ -1,0 +1,19 @@
+{
+	"type": 2,
+	"name": "Liquidzz",
+	"description": "",
+	"organisation": "",
+	"url": {
+		"state": "inactive",
+		"uri": "http://www.liquidzz.com/"
+	},
+	"tags": ["ruby on rails", "mysql", "html", "css", "angularjs", "jquery"],
+	"datadescription": "The sun is beating down and everybody is looking for ways to combat the heat. And, <b>Liquidzz</b>… naturally fresh, the newly opened little outlet on Lake View Road is making merry with a menu card that lists more than 200 types of juices, shakes, smoothies and (for those who want it) hot beverages.",
+	"code": [{
+		"title": "Code Repo",
+		"url": "https://github.com/cs1193/gobbler/"
+	}, {
+		"title": "Full Repo",
+		"url": "https://bitbucket.org/cs1193/gobbler/"
+	}]
+}

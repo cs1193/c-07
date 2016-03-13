@@ -119,9 +119,9 @@
 	
 	/// Work Module ///
 	
-	angular.module('app.work', []);
+	angular.module('app.work', ['hljs']);
 
-	function WorkConfig ($stateProvider) {
+	function WorkConfig ($stateProvider, hljsServiceProvider) {
 		$stateProvider.state("work", {
 			url: "/work/:item",
 			templateUrl: "work.html",
@@ -132,14 +132,19 @@
 				item: { squash: true, value: null }
 			}
 		});
+
+		hljsServiceProvider.setOptions({
+			// replace tab with 4 spaces
+			tabReplace: '    '
+		});
 	}
 
-	WorkConfig.$inject = ['$stateProvider'];
+	WorkConfig.$inject = ['$stateProvider', 'hljsServiceProvider'];
 
 	angular.module('app.work').config(WorkConfig);
 
 
-	function WorkController ($log, $stateParams, WorkService, $rootScope) {
+	function WorkController ($log, $stateParams, WorkService, $rootScope, $sce) {
 		$log.log("Work", $stateParams.item);
 
 		$rootScope.showFooterMenu = true;
@@ -149,6 +154,7 @@
 			this.showList = false;
 			WorkService.getDataByKey($stateParams.item).then(function (response) {
 				self.workData = response;
+				self.workDataDescription = self.workData.datadescription ? $sce.trustAsHtml(self.workData.datadescription) : null;
 				$log.log(response);
 			}, function (error) {
 				$log.error(error);
@@ -159,7 +165,7 @@
 
 	}
 
-	WorkController.$inject = ['$log', '$stateParams', 'WorkService', '$rootScope'];
+	WorkController.$inject = ['$log', '$stateParams', 'WorkService', '$rootScope', '$sce'];
 
 	angular.module('app.work').controller("WorkController", WorkController);
 

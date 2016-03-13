@@ -1,0 +1,23 @@
+{
+	"type": 1,
+	"name": "AMPC 2013",
+	"description": "",
+	"url": {
+		"state": "inactive",
+		"uri": "http://www.annauniv.edu/ampc2013"
+	},
+	"images": [{
+		"title": "Home",
+		"url": "/work/ampc2013/home.png"
+	}, {
+		"title": "",
+		"url": "/work/ampc2013/page1.png"
+	}, {
+		"title": "",
+		"url": "/work/ampc2013/page2.png"
+	}, {
+		"title": "",
+		"url": "/work/ampc2013/page3.png"
+	}],
+	"tags": ["php", "mysql", "html", "css", "jquery"]
+}

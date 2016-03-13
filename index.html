@@ -6,11 +6,14 @@
 		<meta charset="utf-8">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/zenburn.min.css">
 		<link rel="stylesheet" href="style.css">
 
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-highlightjs/0.5.1/angular-highlightjs.min.js"></script>
 		<script type="text/javascript" src="radarChart.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 	</head>
@@ -22,6 +25,8 @@
 			<main>
 				<ui-view></ui-view>
 			</main>
+			<div class="cover-layer"></div>
+			<div class="loading-bar"></div>
 			<footer>
 				<portfolio-footer></portfolio-footer>
 			</footer>
@@ -57,7 +62,7 @@
 						<div class="ten columns">
 							<ul class="data-content-link">
 								<li><a href="/work/vision2012">VISION 2012</a></li>
-								<li><a href="/work/aaceg2012">AACEG 2012</a></li>
+								<li><a href="/work/ampc2013">AMPC 2013</a></li>
 							</ul>
 						</div>
 					</div>
@@ -70,7 +75,7 @@
 								<li><a href="/work/itrix2013">ITRIX 2013</a></li>
 								<li><a href="/work/cos2013">COS 2013</a></li>
 								<li><a href="/work/ceghostel">CEG Hostel</a></li>
-								<li><a href="/work/k2014">Kurukshetra 2014</a></li>
+								<li><a href="/work/k14">Kurukshetra 2014</a></li>
 							</ul>
 						</div>
 					</div>
@@ -80,6 +85,7 @@
 						</div>
 						<div class="ten columns">
 							<ul class="data-content-link">
+								<li><a href="/work/liquidzz">Liquidzz</a></li>
 								<li><a href="/work/pinnacle2014">PINNACLE 2014</a></li>
 								<li><a href="/work/itrix2014">ITRIX 2014</a></li>
 							</ul>
@@ -139,13 +145,41 @@
 									</div>
 								</div>
 								<div class='content'>
-									<img ng-src="{{ workImage.url }}" title="{{ workImage.title }}">
+									<img ng-src="{{ workImage.url }}" title="{{ workImage.title }}" class="browser-image">
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="row work-item-holder" data-type="1" ng-show="vm.workData.type == 2">
-						Proxima
+						<div class="three columns">
+							<h3 class="work-item-title">
+								{{ vm.workData.name }}
+							</h3>
+							<h5 class="work-item-url">
+								<a ng-href="{{ vm.workData.url.uri }}" target="_blank">{{ vm.workData.url.uri }}</a>
+							</h5>
+							<h5 class="work-item-status">
+								{{ vm.workData.url.state }}
+							</h5>
+							<p class="work-item-description" ng-show="vm.workData.description != ''">
+								{{ vm.workData.description }}
+							</p>
+							<div class="work-item-tags" ng-show="vm.workData.tags.length">
+								<span ng-repeat="tag in vm.workData.tags" ng-show="tag">
+									{{ tag }}
+								</span>
+							</div>
+						</div>
+						<div class="nine columns">
+							<div class="work-item-data-description">
+								<p ng-bind-html="vm.workDataDescription"></p>
+							</div>
+							<div class="work-item-code-samples" ng-show="vm.workData.code.length">
+								<a class="work-item-code-sample" ng-repeat="code in vm.workData.code" ng-href="{{ code.url }}">
+									<span class="work-item-code-track-data">{{ code.title }}</span> {{ code.url }}
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -337,7 +371,7 @@
 							<div class="current-profile-track-data-holder">
 								<div class="current-profile-data-content">
 									<ul class="current-profile-data-list">
-										<li>Telugu (Mothertongue)</li>
+										<li>Telugu <div class="current-profile-data-type">Mothertongue</div></li>
 										<li>Tamil</li>
 										<li>English</li>
 										<li>French</li>
