@@ -1,7 +1,7 @@
 {
 	"type": 1,
 	"name": "Chamber of Secrets 2013",
-	"description": "",
+	"description": "COS is an online treasure hunt program made part of ITrix 2013",
 	"organisation": "",
 	"url": {
 		"state": "inactive",
@@ -18,8 +18,5 @@
 		"url": "/work/cos2013/page2.png"
 	}],
 	"tags": ["php", "mysql", "html", "css", "jquery"],
-	"code": [{
-		"title": "",
-		"url": ""
-	}]
+	"code": []
 }

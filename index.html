@@ -120,7 +120,7 @@
 							<h3 class="work-item-title">
 								{{ vm.workData.name }}
 							</h3>
-							<h5 class="work-item-url">
+							<h5 class="work-item-url" ng-show="vm.workData.url.uri">
 								<a ng-href="{{ vm.workData.url.uri }}" target="_blank">{{ vm.workData.url.uri }}</a>
 							</h5>
 							<h5 class="work-item-status">
@@ -147,6 +147,12 @@
 								<div class='content'>
 									<img ng-src="{{ workImage.url }}" title="{{ workImage.title }}" class="browser-image">
 								</div>
+							</div>
+
+							<div class="work-item-code-samples" ng-show="vm.workData.code.length">
+								<a class="work-item-code-sample" ng-repeat="code in vm.workData.code" ng-href="{{ code.url }}" target="_blank">
+									<span class="work-item-code-track-data">{{ code.title }}</span> {{ code.url }}
+								</a>
 							</div>
 						</div>
 					</div>
@@ -175,7 +181,7 @@
 								<p ng-bind-html="vm.workDataDescription"></p>
 							</div>
 							<div class="work-item-code-samples" ng-show="vm.workData.code.length">
-								<a class="work-item-code-sample" ng-repeat="code in vm.workData.code" ng-href="{{ code.url }}">
+								<a class="work-item-code-sample" ng-repeat="code in vm.workData.code" ng-href="{{ code.url }}" target="_blank">
 									<span class="work-item-code-track-data">{{ code.title }}</span> {{ code.url }}
 								</a>
 							</div>
@@ -217,7 +223,7 @@
 										<h5 class="publication-publisher-title">
 											Elsevier Science and Technology
 											<div class="u-pull-right publication-options-menu">
-												<a href="javascript:void(0)" disabled><i class="fa fa-external-link"></i></a>
+												<!-- <a href="javascript:void(0)" disabled><i class="fa fa-external-link"></i></a> -->
 												<a href="http://www.elsevierst.com/conference_book_download_chapter.php?cbid=83#chapter60" target="_blank"><i class="fa fa-link"></i></a>
 												<a href="/publication/9789351072621_ERCICA_2014_vol2_60.pdf" target="_blank"><i class="fa fa-download"></i></a>
 											</div>

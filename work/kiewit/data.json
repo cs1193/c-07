@@ -1,0 +1,13 @@
+{
+	"type": 2,
+	"name": "Kiewit",
+	"description": "Asset Management Portal for Kiewit by Caterpillar EDC-I",
+	"organisation": "",
+	"url": {
+		"state": "active",
+		"uri": "https://www.kiewitassetmanagementportal.com"
+	},
+	"tags": ["jquery", "html", "css", "`gulp", "jenkins", "google maps", "jqxwidgets", "jqxcharts", "jqxgrids"],
+	"datadescription": "Kiewit Asset Management Portal is dashboard for fleet management for Kiewit, a big construction company based in USA, famous for their expressway constructions and public projects.<br><br> There were primarily 3 pages for this application, though it was not developed to be a SPA, it turned out to be most of the application is dependent on javascript<br><br><ul><li>Geofencing - Polygon on Maps</li><li>Alert Wizards</li><li>Long Polling Data</li><li>Responsive Web Page</li><li>Scheduled Reports</li><li>Faceted Filters for asset grid manipulation</li><li>SessionStorage caching for performance optimization.</li></ul>",
+	"code": []
+}

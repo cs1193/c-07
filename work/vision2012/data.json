@@ -1,7 +1,7 @@
 {
 	"type": 1,
 	"name": "Vision 2012",
-	"description": "",
+	"description": "Vision is the national-level technical symposium organised by the Electronics and Communication Engineers' Association",
 	"organisation": "",
 	"url": {
 		"state": "inactive",
@@ -18,8 +18,5 @@
 		"url": "/work/vision2012/page2.png"
 	}],
 	"tags": ["php", "mysql", "html", "css", "jquery"],
-	"code": [{
-		"title": "",
-		"url": ""
-	}]
+	"code": []
 }

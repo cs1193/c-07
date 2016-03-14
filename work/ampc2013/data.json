@@ -1,10 +1,10 @@
 {
 	"type": 1,
 	"name": "AMPC 2013",
-	"description": "",
+	"description": "AMPC 2013 is an Inter-disciplinary conference is to bring together the state-of-the-art developments on all aspects related to the processing of advanced materials like composites, nanostructured materials, ceramics and thin films.",
 	"url": {
 		"state": "inactive",
-		"uri": "http://www.annauniv.edu/ampc2013"
+		"uri": ""
 	},
 	"images": [{
 		"title": "Home",
@@ -19,5 +19,5 @@
 		"title": "",
 		"url": "/work/ampc2013/page3.png"
 	}],
-	"tags": ["php", "mysql", "html", "css", "jquery"]
+	"tags": ["php", "mysql", "pdo", "html", "css", "jquery"]
 }

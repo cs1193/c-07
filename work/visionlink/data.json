@@ -1,0 +1,16 @@
+{
+	"type": 2,
+	"name": "Visionlink NextGen",
+	"description": "Unified Fleet Management by VisionSite Solution (A Caterpillar/Trimble Partnership)",
+	"organisation": "",
+	"url": {
+		"state": "inactive",
+		"uri": "https://www.myvisionlink.com/"
+	},
+	"tags": ["html5", "css3", "angularjs", "typescript", "es6", "webpack", "gulp", "jenkins"],
+	"datadescription": "Visionlink is a joint venture by Caterpillar/Trimble enterprise - this project is part of extended vision of Kiewit, where the concept of mixed fleet asset management is bought in, to make it multi-tenant, VisionSite Solutions took in an idea of making a multi-tenant MFAM application.",
+	"code": [{
+		"title": "Code Sample",
+		"url": "https://github.com/cs1193/miracle"
+	}]
+}

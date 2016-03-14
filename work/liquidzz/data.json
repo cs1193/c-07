@@ -8,7 +8,7 @@
 		"uri": "http://www.liquidzz.com/"
 	},
 	"tags": ["ruby on rails", "mysql", "html", "css", "angularjs", "jquery"],
-	"datadescription": "The sun is beating down and everybody is looking for ways to combat the heat. And, <b>Liquidzz</b>… naturally fresh, the newly opened little outlet on Lake View Road is making merry with a menu card that lists more than 200 types of juices, shakes, smoothies and (for those who want it) hot beverages.",
+	"datadescription": "The sun is beating down and everybody is looking for ways to combat the heat. And, <b>Liquidzz</b>… naturally fresh, the newly opened little outlet on Lake View Road is making merry with a menu card that lists more than 200 types of juices, shakes, smoothies and (for those who want it) hot beverages.<br><br>This application was primarily based out of web, then moved to mobile platforms, owing to the success of restaurant management point-of-sale application.<br><br><ul><li>E-Commerce</li><li>Content Management System</li></ul>",
 	"code": [{
 		"title": "Code Repo",
 		"url": "https://github.com/cs1193/gobbler/"

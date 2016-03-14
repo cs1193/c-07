@@ -256,6 +256,9 @@ h3.work-item-title {
 
 h5.work-item-url {
 	font-size: 1vw;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 h5.work-item-url a {

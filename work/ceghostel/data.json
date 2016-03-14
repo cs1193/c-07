@@ -1,0 +1,13 @@
+{
+	"type": 2,
+	"name": "CEG Homes",
+	"description": "Hostel Management Application for College of Engineering, Guindy",
+	"organisation": "",
+	"url": {
+		"state": "active",
+		"uri": "http://ceghostel.in/"
+	},
+	"tags": ["ruby on rails", "mysql", "html", "css", "jquery", "angularjs", "multi-tenant"],
+	"datadescription": "CEG Homes is a standard Hostel Management System developed primary for operations of College of Engineering, Guindy.<br><br>Features<ul><li>Visual Room Management</li><li>Mess Stocking and Management</li><li>Fee Payment Gateway</li><li>Complaint and Grievance</li><li>New Student On-boarding</li></ul>",
+	"code": []
+}

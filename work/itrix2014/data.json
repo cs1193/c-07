@@ -1,0 +1,13 @@
+{
+	"type": 2,
+	"name": "ITrix 2014",
+	"description": "International Technical Symposium organized by Department of Information Science and Technology",
+	"organisation": "",
+	"url": {
+		"state": "inactive",
+		"uri": "https://www.itrix.in"
+	},
+	"tags": ["html", "css", "angularjs", "requirejs"],
+	"datadescription": "<b>Work In Progress</b>",
+	"code": []
+}

@@ -1,19 +1,23 @@
 {
-	"type": 2,
+	"type": 1,
 	"name": "Pinnacle 2014",
-	"description": "",
+	"description": "Pinnacle is an international technical symposium by Society of Mechanical Engineers, College of Engineering, Guindy.",
 	"organisation": "",
 	"url": {
 		"state": "inactive",
 		"uri": "http://www.pinnacleceg.com/"
 	},
-	"tags": ["php", "mysql", "html", "css", "jquery"],
+	"images": [{
+		"title": "Home",
+		"url": "/work/pinnacle2014/home.png"
+	}],
+	"tags": ["ruby on rails", "mysql", "html", "css", "jquery"],
 	"datadescription": "",
 	"code": [{
 		"title": "Code Repo",
-		"url": "https://bitbucket.org/cs1193/gobbler/"
+		"url": "https://github.com/cs1193/sme"
 	}, {
 		"title": "Full Repo",
-		"url": "https://bitbucket.org/cs1193/gobbler/"
+		"url": "https://bitbucket.org/cs1193/sme/"
 	}]
 }
